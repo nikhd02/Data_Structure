@@ -86,23 +86,14 @@ void traverseInOrder2(node *head)
 
 void traverseInReverseOrder(node *head)
 {
-    //  with call stack - recursive approach
-    // if (head->next != NULL)
-    //     traverseInReverseOrder(head->next);
-
-    // printf("\n%d", head->info);
-    //  without using call stack
-    // Using an array as a stack
-    // Reverse the linkedlist
     head = reverseLinkedList(head);
     traverseInOrder(head);
-    // reseting
     head = reverseLinkedList(head);
 }
 
 void traverseInReverseOrder2(node *head)
 {
-    //  with call stack - recursive approach
+    
     if (head->next != NULL)
         traverseInReverseOrder(head->next);
 
@@ -118,7 +109,6 @@ node *searchInUnsortedList(node *head, int item)
     return head;
 }
 
-// Sorted in increasing order
 node *searchInSortedList(node *head, int item)
 {
     while (head != NULL && head->data != item)
@@ -286,11 +276,4 @@ int main()
             printf("\nInvalid Choice");
         }
     } while (choice != 12);
-
-    // insertAtStart(&head, 10);
-    // insertAtEnd(&head, 20);
-    // insertAtStart(&head, 30);
-    // insertAtEnd(&head, 40);
-    // traverseInOrder(head);
-    // traverseInReverseOrder(head);
 }
