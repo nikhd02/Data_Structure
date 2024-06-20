@@ -119,13 +119,13 @@ void multiplyPolynomial(node *ptr1, node *ptr2, node **ptr3)
 
 void main()
 {
-    node *poly1 = NULL;
-    node *poly2 = NULL;
-    node *poly3 = NULL;
-    node *poly4 = NULL;
-    addNode(&poly1, 5, 4);
-    addNode(&poly1, 3, 3);
-    addNode(&poly2, 8, 4);
+    node *poly1 = NULL,*poly2 = NULL,*poly3 = NULL,*poly4 = NULL;
+    // node *poly2 = NULL;
+    // node *poly3 = NULL;
+    // node *poly4 = NULL;
+    addNode(&poly1, 5, 4),addNode(&poly1, 3, 3),addNode(&poly2, 8, 4);
+    // addNode(&poly1, 3, 3);
+    // addNode(&poly2, 8, 4);
     addNode(&poly2, 5, 3);
     addNode(&poly2, 2, 2);
     // addNode(&poly2, 4, 1);

@@ -87,7 +87,7 @@ void traverseInOrder2(node *head)
 void traverseInReverseOrder(node *head)
 {
     head = reverseLinkedList(head);
-    traverseInOrder(head);
+    traverseInOrder(head); 
     head = reverseLinkedList(head);
 }
 
@@ -95,7 +95,7 @@ void traverseInReverseOrder2(node *head)
 {
     
     if (head->next != NULL)
-        traverseInReverseOrder(head->next);
+        traverseInReverseOrder2(head->next);
 
     printf("\n%d", head->data);
 }
@@ -260,7 +260,7 @@ int main()
             traverseInOrder(head);
             break;
         case 9:
-            traverseInReverseOrder(head);
+            traverseInReverseOrder2(head);
             break;
         case 10:
             head = reverseLinkedList(head);
